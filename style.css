@@ -1,3 +1,9 @@
+body {
+  background: url('https://img.freepik.com/premium-photo/universe-fire_492154-6503.jpg') no-repeat center center fixed;
+  background-size: cover;
+  font-family: 'Poppins', sans-serif;
+  color: white;
+}
 .cosmic-bg {
   background: url('https://img.freepik.com/premium-photo/universe-fire_492154-6503.jpg') center/cover no-repeat fixed;
   position: fixed;
@@ -18,4 +24,5 @@
   from { background-position: 0 0; }
   to { background-position: -5000px 5000px; }
 }
+
 

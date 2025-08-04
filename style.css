@@ -1,5 +1,5 @@
 .cosmic-bg {
-  background: url('assets/images/nebula.jpg') center/cover no-repeat fixed;
+  background: url('https://img.freepik.com/premium-photo/universe-fire_492154-6503.jpg') center/cover no-repeat fixed;
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
@@ -18,3 +18,4 @@
   from { background-position: 0 0; }
   to { background-position: -5000px 5000px; }
 }
+

@@ -1,0 +1,33 @@
+function initializeMeditationPage() {
+    initializeBreathTimer();
+}
+
+->
+
+function initializeMeditationPage() {
+    initializeBreathTimer();
+    initializeTimerPresets();
+}
+
+function initializeTimerPresets() {
+    const presetBtns = document.querySelectorAll('.preset-btn');
+    const minutesDisplay = document.querySelector('.minutes');
+    const secondsDisplay = document.querySelector('.seconds');
+    
+    presetBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const timeInSeconds = parseInt(btn.dataset.time);
+            const minutes = Math.floor(timeInSeconds / 60);
+            const seconds = timeInSeconds % 60;
+            
+            if (minutesDisplay && secondsDisplay) {
+                minutesDisplay.textContent = minutes.toString().padStart(2, '0');
+                secondsDisplay.textContent = seconds.toString().padStart(2, '0');
+            }
+            
+            // Update active state
+            presetBtns.forEach(otherBtn => otherBtn.classList.remove('active'));
+            btn.classList.add('active');
+        });
+    });
+}

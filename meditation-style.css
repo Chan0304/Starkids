@@ -1,0 +1,329 @@
+@keyframes progress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+->
+
+@keyframes progress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}
+
+/* Meditation Page Specific Styles */
+.scrolling-quotes {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.quote-track {
+  display: inline-block;
+  animation: scrollQuotes 30s linear infinite;
+}
+
+.quote-track .quote {
+  display: inline-block;
+  margin-right: 3rem;
+  font-family: 'Lora', serif;
+  font-style: italic;
+  color: var(--cosmic-white);
+  font-size: 1.2rem;
+}
+
+@keyframes scrollQuotes {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.sessions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.session-card {
+  background: rgba(26, 26, 46, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.session-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--neon-glow);
+  border-color: var(--cosmic-purple);
+}
+
+.session-image {
+  height: 200px;
+  background: linear-gradient(135deg, var(--cosmic-deep), var(--cosmic-dark));
+  position: relative;
+  overflow: hidden;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background: rgba(139, 92, 246, 0.8);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cosmic-white);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.play-button:hover {
+  background: rgba(139, 92, 246, 1);
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.session-content {
+  padding: 1.5rem;
+}
+
+.session-content h3 {
+  font-family: 'Lora', serif;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--cosmic-white);
+}
+
+.session-content p {
+  color: var(--cosmic-gray);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.session-meta {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.duration,
+.level {
+  background: linear-gradient(45deg, var(--cosmic-purple), var(--cosmic-cyan));
+  color: var(--cosmic-white);
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.session-btn {
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.breath-timer {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 3rem;
+  background: rgba(26, 26, 46, 0.5);
+  border-radius: 20px;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.timer-display {
+  margin-bottom: 2rem;
+}
+
+.timer-circle {
+  width: 200px;
+  height: 200px;
+  border: 3px solid rgba(139, 92, 246, 0.3);
+  border-radius: 50%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(6, 182, 212, 0.1));
+}
+
+.timer-text {
+  font-family: 'Lora', serif;
+  font-size: 2.5rem;
+  color: var(--cosmic-white);
+  font-weight: 600;
+}
+
+.breath-indicator {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.breath-circle {
+  width: 150px;
+  height: 150px;
+  border: 2px solid var(--cosmic-cyan);
+  border-radius: 50%;
+  animation: breath 4s ease-in-out infinite;
+}
+
+@keyframes breath {
+  0%, 100% { transform: scale(1); opacity: 0.3; }
+  50% { transform: scale(1.2); opacity: 0.8; }
+}
+
+.timer-controls {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.timer-presets {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.preset-btn {
+  background: rgba(139, 92, 246, 0.2);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  color: var(--cosmic-white);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.preset-btn:hover,
+.preset-btn.active {
+  background: rgba(139, 92, 246, 0.4);
+  border-color: var(--cosmic-purple);
+}
+
+.breath-pattern {
+  margin-top: 2rem;
+}
+
+.breath-pattern h3 {
+  font-family: 'Lora', serif;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--cosmic-white);
+}
+
+.pattern-display {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.pattern-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.pattern-label {
+  color: var(--cosmic-gray);
+  font-size: 0.875rem;
+}
+
+.pattern-time {
+  background: linear-gradient(45deg, var(--cosmic-purple), var(--cosmic-cyan));
+  color: var(--cosmic-white);
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.video-sessions-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.video-session {
+  background: rgba(26, 26, 46, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.video-session:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--neon-glow);
+  border-color: var(--cosmic-purple);
+}
+
+.session-info {
+  padding: 1.5rem;
+}
+
+.session-info h3 {
+  font-family: 'Lora', serif;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--cosmic-white);
+}
+
+.session-info p {
+  color: var(--cosmic-gray);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.tip-card {
+  background: rgba(26, 26, 46, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.tip-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--neon-glow);
+  border-color: var(--cosmic-purple);
+}
+
+.tip-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.tip-card h3 {
+  font-family: 'Lora', serif;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--cosmic-white);
+}
+
+.tip-card p {
+  color: var(--cosmic-gray);
+  line-height: 1.6;
+}

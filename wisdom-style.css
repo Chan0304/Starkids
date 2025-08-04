@@ -1,0 +1,286 @@
+.read-time {
+  color: var(--cosmic-gray);
+  font-size: 0.875rem;
+}
+
+->
+
+.read-time {
+  color: var(--cosmic-gray);
+  font-size: 0.875rem;
+}
+
+/* Wisdom Page Specific Styles */
+.wisdom-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.wisdom-card {
+  background: linear-gradient(135deg, var(--cosmic-deep), var(--cosmic-dark));
+  border-radius: 20px;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.wisdom-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.wisdom-card:hover::before {
+  left: 100%;
+}
+
+.wisdom-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--neon-glow);
+}
+
+.card-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.wisdom-card:hover .card-glow {
+  opacity: 1;
+}
+
+.wisdom-card:nth-child(1) { border-left: 4px solid var(--cosmic-purple); }
+.wisdom-card:nth-child(2) { border-left: 4px solid var(--cosmic-cyan); }
+.wisdom-card:nth-child(3) { border-left: 4px solid var(--cosmic-pink); }
+.wisdom-card:nth-child(4) { border-left: 4px solid var(--cosmic-orange); }
+.wisdom-card:nth-child(5) { border-left: 4px solid var(--cosmic-yellow); }
+.wisdom-card:nth-child(6) { border-left: 4px solid var(--cosmic-green); }
+.wisdom-card:nth-child(7) { border-left: 4px solid var(--cosmic-purple); }
+.wisdom-card:nth-child(8) { border-left: 4px solid var(--cosmic-cyan); }
+.wisdom-card:nth-child(9) { border-left: 4px solid var(--cosmic-pink); }
+
+.wisdom-card h3 {
+  font-family: 'Lora', serif;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--cosmic-white);
+}
+
+.wisdom-card p {
+  color: var(--cosmic-gray);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+
+.wisdom-card {
+  background: linear-gradient(135deg, #1b1b3a, #2e2e60);
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 0 20px #8a2be2;
+}
+.card-glow {
+  background: radial-gradient(circle, rgba(138,43,226,0.3) 0%, transparent 80%);
+}
+
+
+.card-quote {
+  font-family: 'Lora', serif;
+  font-style: italic;
+  color: var(--cosmic-cyan);
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.videos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.video-card {
+  background: rgba(26, 26, 46, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  border-radius: 20px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--neon-glow);
+  border-color: var(--cosmic-purple);
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  overflow: hidden;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px 20px 0 0;
+}
+
+.video-info {
+  padding: 1.5rem;
+}
+
+.video-info h3 {
+  font-family: 'Lora', serif;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--cosmic-white);
+}
+
+.video-info p {
+  color: var(--cosmic-gray);
+  line-height: 1.6;
+}
+
+.channel-link {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin: 2rem 0;
+  padding: 3rem;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(6, 182, 212, 0.1));
+  border-radius: 20px;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.channel-content h2 {
+  font-family: 'Lora', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(45deg, var(--cosmic-purple), var(--cosmic-cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.channel-content p {
+  color: var(--cosmic-gray);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.channel-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.1rem;
+  padding: 1rem 2rem;
+}
+
+.daily-wisdom {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  margin: 2rem 0;
+  padding: 3rem;
+  background: rgba(26, 26, 46, 0.5);
+  border-radius: 20px;
+  border: 1px solid rgba(139, 92, 246, 0.2);
+}
+
+.wisdom-quote blockquote {
+  font-family: 'Lora', serif;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: var(--cosmic-white);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.wisdom-meta {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.wisdom-date {
+  color: var(--cosmic-cyan);
+  font-weight: 500;
+}
+
+.wisdom-category {
+  background: linear-gradient(45deg, var(--cosmic-purple), var(--cosmic-cyan));
+  color: var(--cosmic-white);
+  padding: 0.25rem 0.75rem;
+  border-radius: 15px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.wisdom-practice h3 {
+  font-family: 'Lora', serif;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: var(--cosmic-white);
+}
+
+.wisdom-practice p {
+  color: var(--cosmic-gray);
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.practice-timer {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.timer-label {
+  color: var(--cosmic-cyan);
+  font-weight: 500;
+}
+
+.timer-bar {
+  width: 100%;
+  height: 8px;
+  background: rgba(139, 92, 246, 0.2);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.timer-progress {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--cosmic-purple), var(--cosmic-cyan));
+  border-radius: 4px;
+  animation: progress 5s linear infinite;
+}
+
+@keyframes progress {
+  0% { width: 0%; }
+  100% { width: 100%; }
+}

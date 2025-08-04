@@ -24,5 +24,15 @@ body {
   from { background-position: 0 0; }
   to { background-position: -5000px 5000px; }
 }
+h1, h2, h3 {
+  font-family: 'Great Vibes', cursive;
+  font-weight: 400;
+  color: #ffd700;
+}
+
+p, li, a, button {
+  font-family: 'Poppins', sans-serif;
+}
+
 
 

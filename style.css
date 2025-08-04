@@ -1,38 +1,61 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  background: url('https://img.freepik.com/premium-photo/universe-fire_492154-6503.jpg') no-repeat center center fixed;
-  background-size: cover;
-  font-family: 'Poppins', sans-serif;
-  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0d0d1f;
+  color: #ffffff;
+  overflow-x: hidden;
+  line-height: 1.6;
 }
-.cosmic-bg {
-  background: url('https://img.freepik.com/premium-photo/universe-fire_492154-6503.jpg') center/cover no-repeat fixed;
+
+/* Particle background */
+#particles-js {
   position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  z-index: -3;
-}
-.stars {
-  background: url('assets/images/stars.png') repeat;
-  animation: moveStars 200s linear infinite;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  opacity: 0.7;
-  z-index: -2;
-}
-@keyframes moveStars {
-  from { background-position: 0 0; }
-  to { background-position: -5000px 5000px; }
-}
-h1, h2, h3 {
-  font-family: 'Great Vibes', cursive;
-  font-weight: 400;
-  color: #ffd700;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
 }
 
-p, li, a, button {
-  font-family: 'Poppins', sans-serif;
+/* Typography */
+h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #00ffe1;
+  text-shadow: 0 0 10px #00ffe1;
+  text-align: center;
 }
 
+h2 {
+  font-size: 2rem;
+  color: #ff9aff;
+  margin-top: 30px;
+  text-align: center;
+}
 
+p {
+  font-size: 1.1rem;
+  color: #dcdcdc;
+  margin-bottom: 20px;
+  text-align: center;
+}
 
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+footer {
+  margin-top: 60px;
+  font-size: 1rem;
+  color: #aaa;
+  text-align: center;
+}
